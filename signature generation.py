@@ -12,7 +12,7 @@ tensorboard = keras.callbacks.TensorBoard(log_dir='./logs',
                  write_graph=True,
                  write_images=False)
 
-class DeepSign():
+class Sign():
 
     def __init__(self, input_vector_size=20000, dropout_rate=0.5, activation_function="relu", lr=0.001, epochs=5000,
                  batch_size=20, noise_factor=0.2):
@@ -31,7 +31,7 @@ class DeepSign():
 
     def buildModels(self):
         """
-        Generates all autoencoders as specified in the DeepSign paper.
+        Generates all autoencoders
         Then, adds up all the hidden layers from all autoencoders to a new encoding model.
         :return:
         """
